@@ -214,7 +214,7 @@ s<template>
 	};
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 	$uni-searchbar-height: 36px;
 
 	.uni-searchbar {
