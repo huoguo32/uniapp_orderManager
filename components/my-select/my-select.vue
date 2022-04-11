@@ -3,7 +3,7 @@
     <!-- 全选按钮 -->
     <view class="check">
       <label class="radio">
-        <radio color="#C00000" :checked="isAllOk" />
+        <radio color="#C00000" :checked="isAllCheck"  @click="checkAll"/>
         <text>全选</text>
       </label>
     </view>
@@ -20,8 +20,21 @@ export default {
   data() {
     return {
       candidates: ['一天以内', '一周以内', '一月以内', '三月以内', '半年以内', '一年以内'],
-      isAllOk:false
+      isAllCheck:false
     };
+  },
+  methods:{
+    //实现所有的小check选中后，全选按钮自动选中
+    quanxuan(e){
+      this.isAllCheck=e
+    },
+    // 全选 、反选功能实现
+    checkAll(){
+      this.isAllCheck=!this.isAllCheck
+      this.$emit('checkAll', {
+        isAllCheck:this.isAllCheck
+      });
+    }
   }
 };
 </script>
