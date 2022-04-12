@@ -13,7 +13,7 @@
         <view>规格：{{ order[0].norm || def.norm }}公斤</view>
         <view>数量：{{ order[1].copies || def.copies }}</view>
         <view>总价：{{ totalPrice || def.totalPrice }}￥</view>
-        <view>时间：{{ order[1].buytime || def.buytime }}</view>
+        <view>时间：<uni-dateformat :date="order[1].buytime" format='yyyy/MM/dd'></uni-dateformat></view>
       </view>
     </view>
   </view>

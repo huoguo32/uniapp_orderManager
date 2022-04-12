@@ -9,16 +9,7 @@
       "enablePullDownRefresh": false
     }
 
-  }    ,{
-            "path" : "components/my-search/12313",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+  }],
   "tabBar": {
     "selectedColor": "#C00000",
     "list": [{

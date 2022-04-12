@@ -1,15 +1,14 @@
 {
-  "name": "statistical",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@escook/request-miniprogram": "^0.2.1"
-  }
+    "id": "dropdown-screen",
+    "name": "下拉筛选",
+    "version": "2.0.1",
+    "description": "下拉筛选",
+    "keywords": [
+        "下拉",
+        "筛选"
+    ],
+    "dependencies": {
+        "@escook/request-miniprogram": "^0.2.1",
+        "moment": "^2.29.2"
+    }
 }
