@@ -40,7 +40,7 @@ export default {
     },
     // 点击时间筛选事件
     bindPickerChange(e) {
-      console.log(111,e.detail.value)
+      // console.log(111,e.detail.value)
       this.index=e.detail.value
       this.title=this.array[e.detail.value]
       this.$emit('timeSelect',e.detail.value)

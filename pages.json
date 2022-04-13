@@ -1,8 +1,5 @@
 {
   "pages": [{
-    "path": "pages/index/index"
-
-  }, {
     "path": "pages/statistical/statistical",
     "style": {
       "navigationBarTitleText": "供应商订单统计",
@@ -10,24 +7,7 @@
     }
 
   }],
-  "tabBar": {
-    "selectedColor": "#C00000",
-    "list": [{
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/tab_icons/home.png",
-        "selectedIconPath": "static/tab_icons/home-active.png"
-      },
-      {
-        "pagePath": "pages/statistical/statistical",
-        "text": "订单统计",
-        "iconPath": "static/tab_icons/cate.png",
-        "selectedIconPath": "static/tab_icons/cate-active.png"
-      }
-
-
-    ]
-  },
+  
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "供应商订单统计",

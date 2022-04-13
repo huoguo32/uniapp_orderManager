@@ -1,7 +1,7 @@
 <template>
   <view class="wap">
     <!-- 导入搜索框组件 -->
-    <my-search class="one1" @nameSearch="nameSearch" @clearSearch="clearSearch"></my-search>
+    <my-search class="one1" @nameSearch="nameSearch" @clearSearch="clearSearch" ></my-search>
     <!-- 导入筛选组件 -->
     <!-- <button type="default" @click="timeSelect(i)">2313</button> -->
     <my-select @checkAll="checkAll" ref="select" @timeSelect="timeSelect" @tableToExcel="tableToExcel"></my-select>
@@ -24,293 +24,7 @@ export default {
     return {
       // 导出的文件储存路径
       filePath: `${wx.env.USER_DATA_PATH}/${+new Date()}.xls`,
-      orderlist: [
-        [
-          {
-            id: 1,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 1,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            // 4.10号
-            buytime: 1649548800000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 2,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 2,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            // 4.7号
-            buytime: 1649606400000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 3,
-            goodsname: '土炸弹',
-            price: '3.20',
-            supplierid: 3,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            buytime: 1649606972111,
-            copies: 20
-          }
-        ],
-        [
-          {
-            id: 4,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 4,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            //4.11
-            buytime: 1649635200000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 5,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 5,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            //4.8
-            buytime: 1649376000000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 6,
-            goodsname: '西瓜',
-            price: '3.20',
-            supplierid: 6,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            //3.22
-            buytime: 1647907200000,
-            copies: 20
-          }
-        ],
-        [
-          {
-            id: 7,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 7,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            //3.23
-            buytime: 1647993600000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 19,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 8,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            //3.24
-            buytime: 1649721600000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 8,
-            goodsname: '西瓜',
-            price: '3.20',
-            supplierid: 9,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            //2.14
-            buytime: 1644796800000,
-            copies: 20
-          }
-        ],
-        [
-          {
-            id: 9,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 10,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            //1.24
-            buytime: 1642982400000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 10,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 11,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            buytime: 1649606400000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 11,
-            goodsname: '西瓜',
-            price: '3.20',
-            supplierid: 12,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            //3.3
-            buytime: 1646265600000,
-            copies: 20
-          }
-        ],
-        [
-          {
-            id: 12,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 13,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            //1.11
-            buytime: 1649606400000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 13,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 14,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            //1.1
-            buytime: 1640995200000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 14,
-            goodsname: '西瓜',
-            price: '3.20',
-            supplierid: 15,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            //12.15
-            buytime: 1649606400000,
-            copies: 20
-          }
-        ],
-        [
-          {
-            id: 15,
-            goodsname: '土豆',
-            price: '9.00',
-            supplierid: 16,
-            norm: '500',
-            imageurl: '/uploads/1_土豆.jpg',
-            show: 1
-          },
-          {
-            buytime: 1622131200000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 16,
-            goodsname: '西红柿',
-            price: '9.50',
-            supplierid: 17,
-            norm: '500',
-            imageurl: '/uploads/1_西红柿.png',
-            show: 1
-          },
-          {
-            //6.15
-            buytime: 1623686400000,
-            copies: 500
-          }
-        ],
-        [
-          {
-            id: 17,
-            goodsname: '西瓜',
-            price: '3.20',
-            supplierid: 18,
-            norm: '500',
-            imageurl: '/uploads/1_西瓜.jpg',
-            show: 1
-          },
-          {
-            //8.15
-            buytime: 1628956800000,
-            copies: 20
-          }
-        ]
-      ],
+      orderlist: [],
       // 订单数据
 
       // 请求数据参数
@@ -331,27 +45,34 @@ export default {
   },
   onLoad() {
     // 注意开发时写了假数据，所以先调用this.getPageData，开发完成后用真数据时用this.getOrderList();
-    // this.getOrderList();
-    this.getPageData();
+    this.getOrderList();
+    // this.getPageData();
   },
   methods: {
     // 获取数据的方法
     async getOrderList() {
       const { data: res } = await uni.$http.get(`/Statistics/index/?supplierid=${this.canshu}`);
+      res.forEach((e, index) => {
+        e[0].ischeck = false;
+        e[1].buytime = Number(e[1].buytime);
+      });
       this.orderlist = this.timeSort(res);
       // this.orderlist = res;
+
       this.getPageData();
       // console.log(this.orderlist);
     },
     // 根据分页设置的数据控制每页显示的数据条数及页码跳转页面刷新
-    getPageData(index) {
+    getPageData() {
       let start = (this.page.current - 1) * this.page.pageSize;
       let end = start + this.page.pageSize;
+
       this.schArr = this.orderlist.slice(start, end);
     },
     // 分页器自带事件：页面切换
     change(e) {
       this.page.current = e.current;
+      // console.log('adsadasdasd')
       this.getPageData();
     }, // 商品的勾选状态发生了变化
     // 自定义事件：改变单选标签状态
@@ -411,17 +132,20 @@ export default {
       return arr.sort(sortData);
     },
     // 定义一个根据时间条件筛选数据的函数
-    timeSelectArray(day) {
-      this.getOrderList();
+    async timeSelectArray(day) {
+      // 重新请求数据
+      await this.getOrderList();
+      // 重新请求数据后刷新全选按钮状态
+      this.$refs.select.quanxuan(false);
       var a = getPreDayDate(day);
-      const arr = this.orderlist.filter(x => x[1].buytime > a);
-      this.orderlist = this.timeSort(arr);
+      const arr2 = this.orderlist.filter(x => x[1].buytime > a);
+      this.orderlist = this.timeSort(arr2);
       this.getPageData();
     },
 
-    // 根据选择时间段筛选数据
+    // 根据选择时间段选择筛选数据规则
     timeSelect(i) {
-      console.log(i);
+      // console.log(i);
       // 引入获取当前时间函数，获取当前时间戳
       // var now = getNowDate();
       // var nowFormat = formatDate(now, 'YYYY-MM-DD');
@@ -445,24 +169,25 @@ export default {
         this.timeSelectArray(365);
       } else {
         // 说明用户选择的全部
-        // 重新调用数据
+        // 重新调用接口获取数据
+        console.log('aaaaa');
         this.getOrderList();
       }
     },
     // 根据数据渲染excel
     tableToExcel() {
-      var arr=this.orderlist.filter(obj => obj[0].ischeck === true)
-      if(!arr.length>0){
+      var arr = this.orderlist.filter(obj => obj[0].ischeck === true);
+      if (!arr.length > 0) {
         return uni.showToast({
           icon: 'error',
           title: '请选择',
           duration: 2000
-        })
+        });
       }
       // console.log(arr)
       // 列标题
       let worksheet = 'sheet1';
-      let str = '<tr><td>编号</td><td>商品名称</td><td>单价</td><td>供应商</td><td>规格</td><td>图片链接</td><td>show</td><td>是否选中</td><td>购买时间</td><td>购买分数</td></tr>';
+      let str = '<tr><td>编号</td><td>商品名称</td><td>单价</td><td>供应商</td><td>规格</td><td>图片链接</td><td>show</td><td>是否选中</td><td>购买时间</td><td>购买份数</td></tr>';
       // 循环遍历，每行加入tr标签，每个单元格加td标签
       for (let i = 0; i < arr.length; i++) {
         str += '<tr>';
@@ -470,10 +195,12 @@ export default {
           // 增加\t为了不让表格显示科学计数法或者其他格式
           str += `<td>${arr[i][0][item] + '\t'}</td>`;
         }
-        for (let x in arr[i][1]) {
-          // 增加\t为了不让表格显示科学计数法或者其他格式
-          str += `<td>${arr[i][1][x] + '\t'}</td>`;
-        }
+        str += `<td>${formatDate(arr[i][1].buytime) + '\t'}</td>`;
+        str += `<td>${arr[i][1].copies + '\t'}</td>`;
+        // for (let x in arr[i][1]) {
+        //   // 增加\t为了不让表格显示科学计数法或者其他格式
+        //   str += `<td>${arr[i][1][x] + '\t'}</td>`;
+        // }
         str += '</tr>';
       }
       // 下载的表格模板数据
@@ -496,7 +223,7 @@ export default {
         filePath: this.filePath,
         data: arr,
         success: res => {
-          console.log(111, res);
+          // console.log(111, res);
           uni.openDocument({
             fileType: 'xls',
             filePath: this.filePath,

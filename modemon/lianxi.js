@@ -84,13 +84,13 @@ export const getEndDate = (data) => {
  * @param data
  * @param format
  */
-export const formatDate = (data, format) => {
+export const formatDate = (data) => {
     if (!data) {
         return ''
     }
-    return data.format(format)
+    return moment(data).format('YYYY-MM-DD')
 }
-
+// console.log(formatDate(1622131200000))
 
 
 // let one = +new Date('2022-04-10')//三天以前
@@ -98,7 +98,7 @@ export const formatDate = (data, format) => {
 // let two = +new Date('2022-04-07')//三天以前
 // console.log(two)
 // console.log(+new Date('2022-04-11'))
-console.log(+new Date('2022-04-12'))
+// console.log(+new Date('2022-04-12'))
 // 一月一内
 // console.log(+new Date('2022-03-22'))
 // console.log(+new Date('2022-03-23'))
@@ -408,4 +408,3 @@ function sortData(a, b) {
     return b[1].buytime - a[1].buytime
 }
 let arr = orderlist.sort(sortData);
-console.log(arr)
