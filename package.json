@@ -9,6 +9,7 @@
     ],
     "dependencies": {
         "@escook/request-miniprogram": "^0.2.1",
+        "file-saver": "^2.0.5",
         "moment": "^2.29.2"
     }
 }

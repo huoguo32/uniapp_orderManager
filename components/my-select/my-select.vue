@@ -65,6 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .select {
+  margin-bottom: 10rpx;
   align-items: center;
   display: flex;
   justify-content: space-around;

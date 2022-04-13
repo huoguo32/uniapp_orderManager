@@ -77,8 +77,8 @@ export default {
 
 <style lang="scss" scoped>
 .my-order {
-  padding-bottom: 7rpx;
-  margin-bottom: 10rpx;
+  // padding-bottom: 7rpx;
+  margin-bottom: 15rpx;
   border: 1px solid gray;
   padding-left: 30rpx;
   display: flex;
@@ -88,6 +88,7 @@ export default {
   .main {
     display: flex;
     image {
+      margin-top: 25rpx;
       margin-left: 10rpx;
       width: 300rpx;
       height: 300rpx;
